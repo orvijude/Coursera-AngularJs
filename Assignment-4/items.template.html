@@ -1,0 +1,47 @@
+<html ng-app="MenuApp" class="ng-scope">
+<head>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <title>Restaurant Menu</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-ui-router.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Our Restaturant</title>
+</head>
+<body>
+    <!-- <h2>Category List</h2> -->
+    <ui-view class="ng-scope">
+        <a ui-sref="home" class="ng-scope" href="#/">Menu</a>
+        <span class="ng-scope">-></span>
+        <a ui-sref="categoryList" class="ng-scope" href="#/category-list">Category</a>
+        <span class="ng-scope"><-</span>
+        <a ui-sref="/" class="ng-scope" href="/">Home</a>
+        
+        <!-- {{itemsCtrl.items.menu_items}} -->
+        <!-- <items items="itemsCtrl.items.menu_items" class="ng-scope ng-isolate-scope"> -->
+        <!-- <ul> -->
+            <!-- <li ng-repeat="item in $ctrl.items"> -->
+                <!-- {{item}} -->
+            <!-- </li> -->
+        <!-- </ul>  -->
+        <!-- </items> -->
+
+        <ul>
+            <li ng-repeat="item in itemsCtrl.items.menu_items">{{item.name}}</li>
+        </ul>
+
+    </ui-view>
+    
+    <script src="menuapp.module.js"></script>
+    <script src="data.module.js"></script>
+
+    <script src="routes.js"></script>
+
+    <script src="categories.component.js"></script>
+    <script src="items.component.js"></script>
+    <script src="category-list.controller.js"></script>
+    <script src="items.controller.js"></script>
+    <script src="menudata.service.js"></script>
+
+</body>
+</html>
