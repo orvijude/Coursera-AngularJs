@@ -1,0 +1,12 @@
+<div class="menu-item-component">
+  <div class="menu-item-component-left">
+      <img ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItem.short_name}}.jpg"
+           align="left"
+          alt="{{$ctrl.menuItem.name}}">
+  </div>
+
+  <div class="menu-item-component-right">
+      <h4>{{$ctrl.menuItem.short_name}}: {{$ctrl.menuItem.name}}</h4>
+      <p>{{$ctrl.menuItem.description}}</p>
+  </div>
+</div>
